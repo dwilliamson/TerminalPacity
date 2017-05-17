@@ -1,0 +1,7 @@
+#include "colors.inc"
+#include "skies.inc"
+
+camera { location <0, 0, -10> look_at <0, 0, 0> }
+light_source { <0, 3.2, -10> color White }
+
+sky_sphere { S_Cloud4 }

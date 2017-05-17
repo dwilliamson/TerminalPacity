@@ -1,0 +1,22 @@
+#include "colors.inc"
+#include "textures.v2"
+#include "shapes.inc"
+
+camera {
+   location <4, -2, -4>
+   look_at <4, -2, 0>
+  }
+
+  light_source { <500,500,-1000> White }
+
+
+  text { ttf "timrom.ttf" "Credits" 0.5, 0
+    pigment { Black }
+    finish { reflection .25 specular 1 }
+    translate <2.67, -1, 0>
+  }
+
+
+  #include "skies.inc"
+
+sky_sphere { S_Cloud3 }

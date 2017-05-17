@@ -1,0 +1,18 @@
+#include "colors.inc"
+#include "shapes.inc"
+#include "finish.inc"
+
+
+light_source { <10, 10, -10> White }
+camera { location <0, 0, -5.4> look_at <0, 0, 0> }
+// create a TrueType text shape
+text
+{
+  ttf          // font type (only TrueType format for now)
+  "c:\windows\fonts\arctic.ttf",  // Microsoft Windows-format TrueType font file name
+  "Register!",   // the string to create
+  2,           // the extrusion depth
+  0            // offset
+  translate <-2, 0, 0>
+  pigment { White } 
+}

@@ -1,0 +1,48 @@
+              Terminal Pacity Episode Description File (.TPE)
+              -----------------------------------------------
+
+
+File Header...
+
+[-----|-|-|--------|-|-|-|-|-|-|-|-|-] 24 bytes
+   A   B C     D    E F G H I J K L M
+
+A: "TPEDF" Signature, signifying Terminal Pacity Episode Description File.
+B: High bit: How many type 2 monsters there are on the level.
+C: Low bit:  How many type 2 monsters there are on the level.
+D: Graphics Template used by the episode.
+E: Verification Byte: (240 - 252).
+F: PAC's start screen (x/y)...
+        +----+----+
+        | x  |  y | MSB first.
+        +----+----+
+G: Verification Byte: (240 - 252).
+H: PAC's start block (x).
+I: PAC's start block (y).
+J: PAC's end screen (x/y)...
+        +----+----+
+        | x  |  y | MSB first.
+        +----+----+
+K: PAC's end block (x).
+L: PAC's end block (y).
+M: Verification Byte: (240 - 252).
+
+Now, you will find a sequence of exactly 22,000 bytes which describes where
+each block goes. There are a total of 220 blocks per screen. Each block is
+encoded left to right, top to bottom on each screen (20 x 11 = 220) and each
+screen is too encoded left to right, top to bottom (10 x 10 = 100, so 220 x
+100 = 22,000).
+
+As you might have guessed, the level designer is restricted to a play area of
+10x10 screens with 20x11 blocks on each screen.
+
+After that information, there is the information about the monsters of the
+screen. Type 2 monsters, that is.
+
+[-|-|-|-] 4 bytes * number of type 2 monsters
+ A B C D
+
+A: Monster block offset.
+B: Monster block offset.
+C: Monster left movement.
+D: Monster right movement.

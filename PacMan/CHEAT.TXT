@@ -1,0 +1,2 @@
+ALO = Extra life
+ALI = Advance level

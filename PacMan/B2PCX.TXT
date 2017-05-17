@@ -1,0 +1,38 @@
+                    ======================================
+                    B2PCX Block Editor for Terminal Pacity
+                    ======================================
+                      Copyright (c) 1997 Don Williamson
+
+
+Before you start editing the graphics from each level (remember, the .GTF
+files are really PCX files only with a different extension) consider the
+amount of blocks you will have to copy and paste and then paste the platforms
+over. I designed the graphics for the fire level this way and it took a long
+time, so I made this program which will do the task for you.
+
+Usage
+-----
+First of all you need to create your block. To do this, create a 256 colour
+PCX file of width 16 and height 16. Now use this whole space to draw your
+block - you cannot however use more than 50 colours on this block so if you
+have originally rendered it (like I did using POV-Ray and Fractint for the
+textures) use your paint program to reduce the number of colours. This is
+because other game colours have to fit in too.
+
+Once you've finished and saved your block all you have to do is type...
+
+   B2PCX <name>.PCX
+
+...and you will be immediately confronted with a picture of what your newly
+constructed GTF file is like. Press any key and this will be saved to disk
+instantly as <name>.GTF.
+
+This newly constructed GTF file can be now loaded up in the level editor!!!
+
+Have fun and be creative, try altering some of the monsters and collective
+things - also, maybe edit the platform outlines but be careful what colours
+you change. The top most colour must stay that of its original because the
+game originally did collision detection on a colour basis (eeugh :).
+
+NEW WEBSITE!!!: http://members.metrocity.net/~alioth/tpacity
+NEW EMAIL!!!:   karalioth@geocities.com

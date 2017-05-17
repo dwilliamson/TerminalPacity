@@ -1,0 +1,229 @@
+
+
+
+           +------------------------------------------------------+
+           |                                                      |
+           |       PACEDIT - The Terminal Pacity Level Editor     |
+           |                     Version 1.00                     |
+           |                                                      |
+           |  Programmed and Designed by Alioth / Don Williamson  |
+           |                                                      |
+           |         Copyright (c) 1997 Don Williamson            |
+           |                                                      |
+           +------------------------------------------------------+
+
+
+                          Level Designer's Manual
+
+CONTENTS:
+
+   1             Introduction
+
+   2             The Level Concept
+
+   3             Using the Editor
+
+   4             Buttons
+
+       4.1           Load Level
+       4.2           Save Level
+       4.3           New Level
+       4.4           Grid On/Off
+       4.5           Change Graphics Template
+       4.6           Map Mode
+       4.7           Change Current Screen
+       4.8           Exit
+
+   5             Squiggly Eyes
+
+
+
+1. Introduction
+==-----------==
+
+Welcome to PacEdit. With this very program, you can expand Terminal Pacity
+to be the game that YOU want it to be. With the editor it is possible to
+create new levels, episodes, graphics and even monsters! To add to this,
+unlike most game level editors, PacEdit is really easy to use. This leaves you
+with the time to create some new and even crazier levels.
+
+One of the reasons this level editor was made, was to prolong the life of
+Terminal Pacity. However, a real bonus is that if you make a level - that
+level is yours!!! Which means that if you want, you could plaster it all
+over the internet. This is what I want to see; people producing levels and
+sharing them with me and the rest of the world. To encourage this, you can
+send me your levels and I'll stick them on my web page for all to see and
+download.
+
+Now, it's time to start making those levels...
+
+
+
+2. The Level Concept
+==----------------==
+
+As you can see, the Terminal Pacity world is made up of a total of 100
+screens (10 horizontal and 10 vertical). Each screen is split up into a number
+of imaginary blocks and within these blocks, a certain obstacle, enemy, thing
+or item of food can be placed. This explains why the levels in Terminal
+Pacity have a uniform look to them. There are a total of 220 blocks per
+screen (20 horizontal and 11 vertical).
+
+Before progressing, it is required that you know the following:
+
+  * Pac can only jump 3 blocks high.
+  * The Squidges and similar acting enemies can only jump 3 blocks high.
+  * Pac will eat through ANY blocks without a grey surrounding. Due to a
+    last minute addition, he will also get stuck in them.
+  * Any blocks placed in a screen other than your current screen, will NOT
+    affect gameplay in the current screen.
+  * Each level must consist of a level start and exit which you will see
+    as soon as you start PacEdit. You cannot delete these in any way.
+  * The structure of the enemies is completely different from that of Pac's,
+    so if you place an enemy on a level in such a place that makes it possible
+    for the enemy to go through walls - it will!
+
+The collision detection in Terminal Pacity is based on pixel colour. From
+my point of view this is not the best method (I could have used proper
+collision detection but I wanted to finish the game in the shortest amount
+of time). If Pac hits a grey pixel, he will cease to move in its direction.
+This explains why it is essential to surround all your levels with the
+grey floor!
+
+| The collision detection HAS been updated slightly. Due to problems where
+| Pac continuously fell through the ground, I opted for a mix between pixel
+| colour and proper detection. The result is slow - but it works!
+
+Lastly, each level is associated with what is called a 'Graphics Template'.
+When you first load up PacEdit, the default template will be used - this
+defines ALL of the sprites and blocks used in the game. Using Graphics
+Templates makes it easy for you to edit the ingame graphics, you can even
+change the look of the monsters! To play a level, you need to have the
+Graphics Template File in the same directory as your level file.
+
+If you want to distribute levels with alternate graphics, please make sure
+you enclose the Graphics Template with them!!!
+
+
+3. Using the Editor
+==---------------==
+
+PacEdit is almost entirely mouse controlled. This is to help people get the
+most out the editor and make levels quick and easy to produce.
+
+Along the bottom of the screen, you will see a scroll bar which contains all
+the sprites used in the Terminal Pacity game, along with a series of buttons
+which perform all manner of functions. Above this part of the screen, you
+should see a gridded space - this is where the level you are currently
+working on, is displayed.
+
+Now, if you see a block or sprite on the scroll bar which you want to place
+in the level, all you do is click on it and you should see a green arrow
+point to it. The block is now selected, and to place it on-screen all you
+do is left-click in the grid you want this block to be placed. There are
+more than 6 blocks however. You can scroll through these with the buttons to
+either side of the scroll bar.
+
+To delete any block you've placed on the screen, just right click on it and
+it should disappear.
+
+You will notice that there are two blocks which cannot be deleted - these are
+the image of Pac and an exit sign. These can, if selected in the scroll bar,
+be moved all over the level. Pac's image specifies his start position.
+
+
+4. Buttons
+==------==
+
+Now it's on to the buttons...
+
+
+4.1. [ Load Level ]
+
+This button has a capital 'L' imprinted on it. Once you click this, a load
+requester will appear. If you change your mind and don't want to load a level,
+just press the 'c' button. To scroll through the list of levels, press the
+up and down arrows, and to select a level, just click on the name.
+
+
+4.2. [ Save Level ]
+
+This button has a capital 'S' imprinted on it. Once you click this, a save
+requester will appear. On this, you will notice two fields. The first is
+editable - the filename, while the second is just displayed - the Graphics
+Template used. You can press escape to cancel the operation or just type
+the name in there and then.
+
+
+4.3. [ New Level ]
+
+This button has a captial 'N' imprinted on it. It's use is pretty explanatory
+really - start again, making a new level. Pac and the Level exit will be
+reset to their original positions.
+
+
+4.4. [ Grid On/Off ]
+
+This button has two rectangles connected by two lines on it. You will see
+that, for ease of use, PacEdit displays a grid on the editing area so you can
+see where things are. However, since some of the grid lines could clash with
+some of the colours, it might be difficult to see what the level really looks
+like in the game. Clicking on this button will turn your grid either on or
+off.
+
+
+4.5. [ Change Graphics Template ]
+
+This button has a picture of the original Pacman ghost on it. Pressing this
+will bring up a requester for loading .GTF files (templates are given this
+extension just incase you might load up a non-template .PCX file - the
+results are... ...'interesting'). This requester works just like the load
+requester.
+
+
+4.6. [ Map Mode ]
+
+This button has two rectangles on it; one is solid and the other is dashed.
+Pressing this gives you a complete view of your level - one pixel represents
+one block. The color representation is as follows...
+
+   Red       -  Lava
+   Orange    -  Entrance / Exit
+   Yellow    -  Food
+   Green     -  Enemies
+   Blue      -  Water
+   Grey      -  Normal blocks / Spikes / Doors
+
+Click on the button again to return to editing mode.
+
+
+4.7. [ Change Current Screen ]
+
+As you know, the game world in Terminal Pacity consists of 100 screens. There
+are four buttons to the right of the screen with solid arrows on them. By
+pressing these, you can manipulate your way around the level.
+
+4.8. [ Exit ]
+
+This button is located at the bottom left of the screen and has the picture
+of an open door on it. If you click this button, you will be asked to confirm
+your decision to leave. However, if you wish to exit without this requestor,
+just press 'Escape'.
+
+
+5. Squiggly Eyes
+==------------==
+
+Notice that in PacEdit, when you try to delete a Squiggly Eye you've just
+placed, a requestor with three buttons appears. These buttons are <DEL>,
+<CON>, and <C>. As usual, if you press C, the operation is canceled leaving
+everything unchanged. If you press DEL, the Squiggly Eye will be deleted
+from the level. The other button however, stands for "Continue" - this button
+brings up another requestor, with which, you can manipulate the movement of
+the Squiggly Eye.
+
+You will see on this requestor, six buttons and two fields with 0's in them.
+The field on the left denotes how many blocks to the left the Squiggly Eye
+will move. The field on the right deals with right movement. To alter these
+values, all you do is press the up and down arrows that correspond to the
+chosen direction. Press OK when you've finished.
