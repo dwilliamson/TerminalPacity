@@ -9,6 +9,7 @@ Layout:
 * PacEdit: Source code and executables for the game level editor.
 * PacMan: Source code and executables for the game.
 * dosgui: DOS installer GUI for the game.
+* TerminalPacity.zip: Playable full game and editor on Windows using embedded DOSBox.
 * termpac.zip: Installer for the Shareware version.
 
 DOSBox or similar is required to run this game.
